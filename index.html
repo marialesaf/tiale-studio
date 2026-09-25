@@ -966,9 +966,10 @@
 
 <script>
 (function(){
-  var WA_NUMBER = "573009043362";
+  var WA_NUMBER = "573239080947";
+  var WA_LINK = "https://wa.me/message/JPHAB5BX2ZJYP1";
   var DEFAULT_MSG = "¡Hola Tiale! Quiero cotizar una página web a la medida 💻";
-  function waLink(msg){ return "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg||DEFAULT_MSG); }
+  function waLink(msg){ return msg ? "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg) : WA_LINK; }
   function wireWa(){ document.querySelectorAll("[data-wa]").forEach(function(el){
     el.setAttribute("href", waLink(el.getAttribute("data-msg"))); el.setAttribute("target","_blank"); el.setAttribute("rel","noopener"); }); }
 
